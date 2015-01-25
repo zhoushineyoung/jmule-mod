@@ -1,0 +1,66 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default Value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td></td>
+      <td>The size of the message in bytes not including the header and size fields</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x41</td>
+      <td>The value of the OP_SERVERIDENT opcode</td>
+    </tr>
+    <tr>
+      <td>Hash</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>A GUID of the server (seems to be used for debug)</td>
+    </tr>
+    <tr>
+      <td>Server IP</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The IP address of the server</td>
+    </tr>
+    <tr>
+      <td>Server Port</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The TCP port on which the server listens</td>
+    </tr>
+    <tr>
+      <td>Tag Count</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The number of tags at the end of the message</td>
+    </tr>
+    <tr>
+      <td>Server Name Tag</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>The name of the server. The tag is a string tag and the tag name is an integer of value 0x1</td>
+    </tr>
+    <tr>
+      <td>Server Description Tag</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>A server description string. The tag is a string tag and the tag name is an integer of value 0xB</td>
+    </tr>
+  </tbody>
+</table>

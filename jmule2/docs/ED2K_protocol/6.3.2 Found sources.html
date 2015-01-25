@@ -1,0 +1,66 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x9B</td>
+      <td>The value of the OP_GLOBFOUNDSOURCES opcode
+</td>
+    </tr>
+    <tr>
+      <td>File source list</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>A list of ﬁle sources described below</td>
+    </tr>
+  </tbody>
+</table>
+
+Source list item format<br>
+The list includes sources for a single ﬁle.
+
+<table cellspacing="0" border="1" cellpadding="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File ID</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>The ﬁle ID to which sources were found</td>
+    </tr>
+    <tr>
+      <td>Sources Count</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>Number of sources reported therein</td>
+    </tr>
+    <tr>
+      <td>List of sources</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>A list of sources in the same format as the
+list in the TCP get sources message in section</td>
+    </tr>
+  </tbody>
+</table>

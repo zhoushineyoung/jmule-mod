@@ -1,0 +1,76 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default Value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including the header and size fields</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x42</td>
+      <td>The value of the OP_FOUNDSOURCES opcode</td>
+    </tr>
+    <tr>
+      <td>File Hash</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>The requested ﬁle hash</td>
+    </tr>
+    <tr>
+      <td>Sources Count</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>The number of sources in this message</td>
+    </tr>
+    <tr>
+      <td>List of sources</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>A list of sources</td>
+    </tr>
+  </tbody>
+</table>
+Search result list item format<br>
+The table below describes the format of a single search result list-item. Each search result<br>
+includes A hash that uniquely identiﬁes the ﬁle along with details of another eMule client<br>
+holding the ﬁle. 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default Value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Client ID</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Client ID for an eMule peer holding the ﬁle</td>
+    </tr>
+    <tr>
+      <td>Client Port</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The TCP port of the client holding the ﬁle</td>
+    </tr>
+  </tbody>
+</table>

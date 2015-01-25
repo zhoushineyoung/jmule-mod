@@ -1,0 +1,51 @@
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>.\jmule.jar</jar>
+  <outfile>.\jmule.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <customProcName>true</customProcName>
+  <stayAlive>false</stayAlive>
+  <manifest></manifest>
+  <icon>.\jmule.ico</icon>
+  <singleInstance>
+    <mutexName>JMule</mutexName>
+    <windowTitle></windowTitle>
+  </singleInstance>
+  <classPath>
+    <mainClass>org.jmule.main.Main</mainClass>
+    <cp>.\lib\swingx-0.9.3.jar</cp>
+    <cp>.\swt-windows\swt.jar</cp>
+  </classPath>
+  <jre>
+    <path></path>
+    <minVersion>1.6.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <maxHeapSize>128</maxHeapSize>
+  </jre>
+  <versionInfo>
+    <fileVersion>0.5.0.0</fileVersion>
+    <txtFileVersion>0.5 Beta</txtFileVersion>
+    <fileDescription>JMule - Java file sharing client</fileDescription>
+    <copyright>Copyright 2007-2009 JMule Team</copyright>
+    <productVersion>0.5.0.0</productVersion>
+    <txtProductVersion>0.5 Beta</txtProductVersion>
+    <productName>JMule</productName>
+    <companyName>JMule Team</companyName>
+    <internalName>JMule</internalName>
+    <originalFilename>jmule.exe</originalFilename>
+  </versionInfo>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <bundledJreErr>This application was configured to use a bundled Java Runtime Environment but the runtime is missing or corrupted.</bundledJreErr>
+    <jreVersionErr>This application requires a Java Runtime Environment</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>

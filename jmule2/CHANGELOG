@@ -1,0 +1,58 @@
+
+  JMule CHANGELOG
+ -----------------------
+ 2010.01.13 | JMule 0.5.8
+ 
+ BUGFIX:   Core     | Fixed bugs in Kad publisher [binary256]
+ FEATURE:  SWT UI   | Added a new column on Kad tasks table : Info about the current running task  [binary256]
+ FEATURE:  Core     | Switched to AspectJ 1.6.8 [binary256]
+ FEATURE:  Core     | IPFilter added [javajox]
+ BUGFIX:   Core     | Correct upload bytes count is shown for each uploaded file [binary256]
+ BUGFIX:   Core     | Fixed many bugs related to Kad manager [binary256]
+ BUGFIX:   Core     | New management for upload client's queue added, now more peers concurrently can upload [binary256]
+ BUGFIX:   Core     | Internal port for peer management is used instead of external [binary256]
+ BUGFIX:   Core&UI  | The stats for server count and peer count are shown on "Statistics tab" [binary256]
+ FEATURE:  UI       | Many "micro" UI improvements [binary256, javajox]
+ 
+ 2010.01.06 | JMule 0.5.6
+            
+ FEATURE:  Core	    | Added new tag architecture which supports more tag types [binary256]
+ BUGFIX:   Core	    | Updated tag scanner with new tag types [binary256]
+ FEATURE:  Core	    | Status of downloads (started/stopped) are saved in part.met files [binary256]
+ BUGFIX:   Core	    | Updated JKad routing table maintenance algorithm [binary256]
+ BUGFIX:   SWT UI   | Fixed NULL pointer exception in "Both" search type when server is not connected [binary256]
+ BUGFIX:   SWT UI   | Fixed displaying of all files in shared view [binary256]
+ BUGFIX:   Core     | Fixed Kad search stop notify for same IDs  [binary256]
+ FEATURE:  Core	    | Kad contacts IP verification [binary256]
+ FEATURE:  SWT UI   | Switched to SWT 3.5 [binary256]
+ FEATURE:  Core     | Switched to AspectJ 1.6.1 [binary256]
+ FEATURE:  Core     | Fully redesigned network architecture [javajox, binary256]
+ FEATURE:  Core     | Added platform manager architecture and basic implementation [javajox]
+ BUGFIX:   Core     | Search on Kad is not done when the "Both" option is used [binary256]
+ FEATURE:  UI       | Switching from Preferences to Properties for UI settings (the BackingStoreException is solved) [javajox]
+ FEATURE:  SWT UI   | New design for SWT config view (tree based) [binary256]
+ FEATURE:  SWT UI   | The content rating is shown in the popup menu on shared view [binary256]
+ FEATURE:  UI       | Other ui improvements [javajox,binary256]
+ FEATURE:  Core     | The Kad and user id are stored in separate files [binary256]
+ FEATURE:  Core     | If all the free space is gone on the partition then downloading process is stoped [javajox]
+ FEATURE:  UI       | If all the free space is gone on the partition then an error message dialog is shown [javajox]
+ 
+ 2009.07.12 | JMule 0.5
+ 
+ BUGFIX:   Swing UI | The system doesn't crash when the geoip.dat file is not found in settings directory [javajox]
+ FEATURE:  Core     | Removed apache file utils library, the core works with our own functions [javajox]
+ FEATURE:  Core     | Experimental Kad support added !!! [binary256]
+ FEATURE:  SWT UI   | Kad view [binary256]
+ FEATURE:  Core     | eDonkey search by criterias [binary256] 
+ BUGFIX:   Core     | The file is moved from temp to incoming directory, when the download process is done,
+                    | in some rare cases downloaded file remains in temp directory [binary256]
+ FEATURE:  Core     | The core can process archived packets used by eMule [binary256]
+ BUGFIX:   Core     | Changed the way how JMule constructs eDonkey packets, so JMule can upload files to eMule (for 0.49c) [binary256] 
+
+ 2008.10.19 | JMule 0.4.1
+
+ BUGFIX:  Swing UI | The icon is not shown on a ToolTip if the system is packed into a .jar file [javajox]
+ FEATURE: Swing UI | Tabs that aren't visible don't update their  UIes. The overall UI should work faster now [javajox]
+ FEATURE: Swing UI | A more number of columns are sortable [javajox]
+ CHANGE:  Swing UI | Other optimizations and improvements [javajox]
+ BUGFIX:  Core	   | 'java.lang.OutOfMemoryError: Java heap space' [binary256]

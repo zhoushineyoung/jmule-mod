@@ -1,0 +1,78 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hash code</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>The result of the hash (specification TBD) performed on the file contents. The hash is used to uniquely identify files, ignoring name diferences between clients</td>
+    </tr>
+    <tr>
+      <td>Client ID</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The client ID in case the client has high ID, or zero otherwise</td>
+    </tr>
+    <tr>
+      <td>Client Port</td>
+      <td>2</td>
+      <td>0x15</td>
+      <td>The client's TCP port or zero in case the client has low ID</td>
+    </tr>
+    <tr>
+      <td>Tag count</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The number of tags following this field</td>
+    </tr>
+    <tr>
+      <td>File Name Tag</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>The filename(Mandatory). The tag is a string tag the tag name is an integer of value 0x1</td>
+    </tr>
+    <tr>
+      <td>File Size Tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>The file size in bytes(Mandatory). The tag is an integer tag and the tag name is an integer of value 0x2</td>
+    </tr>
+    <tr>
+      <td>File Type Tag</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>The file type (Optional). One of the following: 'Audio','Video','Image','Pro' or 'Doc'. The tag is a string tag the tag name is an integer of value 0x3</td>
+    </tr>
+    <tr>
+      <td>File Format Tag</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>The file extension converted to to lower case (Optional). For example - 'zip','exe'. The tag is a string tag the tag name is an integer of value 0x4</td>
+    </tr>
+    <tr>
+      <td>Media length Tag</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>In case the file is mp3, the song play time (Optional). The tag is a string tag the tag name is the string "length"</td>
+    </tr>
+    <tr>
+      <td>Media Bitrate Tag</td>
+      <td>TBD</td>
+      <td>NA</td>
+      <td>In case the file is mp3, the encoding bitrate (Optional). The tag is an integer tag the tag name is the string "bitrate" </td>
+    </tr>
+    <tr>
+      <td>Media Codec Tag</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>In case the file is a movie - the codec used to encode it (Optional, never sent). The tag is a string tag the tag name is the string "codec"</td>
+    </tr>
+  </tbody>
+</table>

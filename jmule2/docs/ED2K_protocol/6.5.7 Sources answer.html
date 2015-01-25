@@ -1,0 +1,98 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xC5</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x81</td>
+      <td>The value of the OP_ REQUESTSOURCES
+opcode</td>
+    </tr>
+    <tr>
+      <td>File ID</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>The ﬁle ID of the required ﬁle</td>
+    </tr>
+    <tr>
+      <td>Source Count</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Always zero from eMule 0.30e</td>
+    </tr>
+    <tr>
+      <td>List of sources</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>A list of sources for the required ﬁle as described below
+</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<b>Source list item format</b>
+<table cellpadding="0" border="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Client ID</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Client ID for an eMule peer holding the ﬁle</td>
+    </tr>
+    <tr>
+      <td>Client Port</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The TCP port of the client holding the ﬁle</td>
+    </tr>
+    <tr>
+      <td>Server IP</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The IP address of the server from which this user was found</td>
+    </tr>
+    <tr>
+      <td>Server Port</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The TCP port on which the server listens to client connections</td>
+    </tr>
+    <tr>
+      <td>Client hash</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>OPTIONAL - sent only if both clients
+have a source exchange version see
+(OP EMULEINFO message) larger than 1</td>
+    </tr>
+  </tbody>
+</table>

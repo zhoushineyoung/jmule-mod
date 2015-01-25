@@ -1,0 +1,64 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x60</td>
+      <td>The value of the
+OP_ASKSHAREDFILESDIRANS opcode
+
+</td>
+    </tr>
+    <tr>
+      <td>Name length</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The length of the directory name that follows</td>
+    </tr>
+    <tr>
+      <td>Directory name
+</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>A shared folder name (which the ﬁle list below
+refers to)
+</td>
+    </tr>
+    <tr>
+      <td>Files Count</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The number of ﬁle names following this ﬁeld</td>
+    </tr>
+    <tr>
+      <td>Files list</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>A list of ﬁle names in (unit16-length, string-
+value) format
+</td>
+    </tr>
+  </tbody>
+</table>

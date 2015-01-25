@@ -1,0 +1,50 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x50</td>
+      <td>The value of the OP FILESTATUS opcode</td>
+    </tr>
+    <tr>
+      <td>File ID</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>The ID of the ﬁle</td>
+    </tr>
+    <tr>
+      <td>Part count</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>File parts count</td>
+    </tr>
+    <tr>
+      <td>Part status</td>
+      <td></td>
+      <td>NA</td>
+      <td>bit array with parts status : 1 - completed part ; 0 - uncompleted part</td>
+    </tr>
+  </tbody>
+</table>

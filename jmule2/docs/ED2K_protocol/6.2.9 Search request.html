@@ -1,0 +1,66 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default Value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including the header and size fields</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>16</td>
+      <td>The value of the OP_SEARCHREQUEST opcode</td>
+    </tr>
+    <tr>
+      <td>Parsed search string</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>The parsed search string format is described below</td>
+    </tr>
+    <tr>
+      <td>File Type Constraint</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>Optional. A string constraint. The string values are one of ("Audio", "Video", "Pro" or "Image". The type field is 3 bytes: 0x1 0x0 0x3</td>
+    </tr>
+    <tr>
+      <td>Min Size Constraint</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>Optional. An integer constraint. The file size is provided in mega bytes. The type field is 4 bytes : 0x1 0x1 0x0 0x2</td>
+    </tr>
+    <tr>
+      <td>Max Size Constraint</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>Optional. An integer constraint. The file size is provided in mega bytes. The type field is 4 bytes : 0x2 0x1 0x0 0x2</td>
+    </tr>
+    <tr>
+      <td>Availability Constraint</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>Optional. An integer constraint. Sets a lower limit on the number of clien that poses the searched file. The type field is 4 bytes: 0x1 0x1 0x0 0x15</td>
+    </tr>
+    <tr>
+      <td>Filename Extension constrain</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>Optional. A string constraint. The type field is 3 bytes: 0x1 0x0 0x3</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,58 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x59</td>
+      <td>The value of the OP FILEREQANSWER opcode</td>
+    </tr>
+    <tr>
+      <td>File ID</td>
+      <td>16</td>
+      <td>NA</td>
+      <td>Unique ﬁle ID</td>
+    </tr>
+    <tr>
+      <td>Name length</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>Optional, sent if the extended request version
+indicated in the eMule info message is greater
+than zero. The ﬁle signiﬁcance is explained in
+this section
+</td>
+    </tr>
+    <tr>
+      <td>Filename</td>
+      <td>Varies</td>
+      <td>NA</td>
+      <td>Optional, sent if the extended request version
+indicated in the eMule info message is greater
+than one. Indicated the current number of
+sources for this ﬁle
+</td>
+    </tr>
+  </tbody>
+</table>

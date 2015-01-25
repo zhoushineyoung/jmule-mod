@@ -1,0 +1,60 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x46</td>
+      <td>The value of the OP SENDINGPART opcode</td>
+    </tr>
+    <tr>
+      <td>File ID</td>
+      <td> 16</td>
+      <td> NA</td>
+      <td>A unique ﬁle ID calculated by hashing the
+ﬁle’s data
+ hash</td>
+    </tr>
+    <tr>
+      <td>Start Pos</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The start position of the downloaded data</td>
+    </tr>
+    <tr>
+      <td>End Pos</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The end position of the downloaded data</td>
+    </tr>
+    <tr>
+      <td>Data</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>The actual downloaded data. This data may
+be compressed.
+</td>
+    </tr>
+  </tbody>
+</table>

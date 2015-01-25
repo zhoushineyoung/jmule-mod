@@ -1,0 +1,82 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including the header and size fields</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x01</td>
+      <td>The value of the OP HELLO opcode</td>
+    </tr>
+    <tr>
+      <td>User Hash size</td>
+      <td>1</td>
+      <td>16</td>
+      <td>The size of the user hash ﬁeld</td>
+    </tr>
+    <tr>
+      <td>User Hash</td>
+      <td>16</td>
+      <td></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>Client ID</td>
+      <td>4</td>
+      <td>0</td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td>TCP Port</td>
+      <td>2</td>
+      <td>4662</td>
+      <td>The TCP port used by the client, conﬁgurable</td>
+    </tr>
+    <tr>
+      <td>Tag Count</td>
+      <td>4</td>
+      <td>4</td>
+      <td>The number of tags following in the message</td>
+    </tr>
+    <tr>
+      <td>Tag list</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>A list of tags specifying remote client’s prop-erties
+</td>
+    </tr>
+    <tr>
+      <td>Server IP</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>The IP of the server to which the client is
+connected
+</td>
+    </tr>
+    <tr>
+      <td>Server TCP Port
+</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The TCP port on which the server listens</td>
+    </tr>
+  </tbody>
+</table>

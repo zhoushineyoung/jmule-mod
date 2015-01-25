@@ -1,0 +1,60 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x97</td>
+      <td>The value of the OP_GLOBSERVSTATREQ opcode</td>
+    </tr>
+    <tr>
+      <td>Challenge</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Unsigned integer. Could be an echo of the challenge sent by the client or a diﬀerent number. In the latter case packet processing stops</td>
+    </tr>
+    <tr>
+      <td>User Count</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Optional. The number of users currently logged in to the server</td>
+    </tr>
+    <tr>
+      <td>Files count</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Optional. The number of ﬁles in the server’s database</td>
+    </tr>
+    <tr>
+      <td>Soft ﬁles limit</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Optional. Unsigned integer server soft ﬁle limit</td>
+    </tr>
+    <tr>
+      <td>Hard ﬁles limit</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Optional. Unsigned integer server hard ﬁle limit</td>
+    </tr>
+    <tr>
+      <td>UDP ﬂags</td>
+      <td>4</td>
+      <td>NA</td>
+      <td>Optional. The server’s UDP ﬂags. Two distinctive ﬂags are deﬁned: 0x01 indicates the server supports the get sources messag 0x02 indicates the the server support the extended get ﬁles message</td>
+    </tr>
+  </tbody>
+</table>

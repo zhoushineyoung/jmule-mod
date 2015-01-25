@@ -1,0 +1,42 @@
+<table cellpadding="0" border="1" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xE3</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including the header and size fields</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x38</td>
+      <td>The value of the OP_SERVERMESSAGE opcode</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>2</td>
+      <td>NA</td>
+      <td>The number of the bytes in the remainder of the message not including the fields described so far</td>
+    </tr>
+    <tr>
+      <td>Messages</td>
+      <td>varies</td>
+      <td>NA</td>
+      <td>A list of server messages separated by new lines</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+   JMule - Java file sharing client
+   Copyright (C) 2007-2008 JMule team ( jmule@jmule.org / http://jmule.org )
+ 
+   Any parts of this program derived from other projects, or contributed
+   by third-party developers are copyrighted by their respective authors.
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   as published by the Free Software Foundation; either version 2
+   of the License, or (at your option) any later version.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+ 
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
+
+<!--
+  Author : javajox
+  Last changed by $$Author: javajox $$ on $$Date: 2009/07/11 09:39:55 $$
+-->
+
+<project name="JMule" default="standard" basedir=".">
+
+<property name="src" value="src"/>
+<property name="bin" value="bin"/>
+<property name="lib" value="lib"/>
+<property name="tmp" value="tmp"/>
+<property name="build" value="build"/>
+<property name="aspectj_location" value="${lib}"/>
+
+<target name="prepare" description="Prepare the building environment">
+	<echo>Preparing the building environment</echo>
+	<mkdir dir="${tmp}"/>
+	<!-- <mkdir dir="${src}"/> -->
+	<mkdir dir="${bin}"/>
+	<copy todir="${bin}/org/jmule/ui/resources">
+		<fileset dir="${src}/org/jmule/ui/resources"/>
+	</copy>
+</target>
+	
+<target name="clean" description="Clean the building environment">
+   <echo>Cleaning the building environment</echo>	
+   <delete dir="${tmp}"/>
+   <!-- <delete dir="${lib}"/> -->
+   <delete dir="${bin}"/>
+   <delete file="mainandconstants.jar"/>
+</target>
+	
+<taskdef resource="org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties">
+    <classpath>
+        <pathelement
+          location="${lib}/aspectjtools.jar"/>
+    </classpath>
+ </taskdef>
+
+<target name="standard" depends="clean,prepare,
+	                             compile_main_and_constants,
+	                             compile,jar">
+</target>
+	
+<target name="usage">
+   <echo>
+	 JMule ant builder usage : 
+	 compile 	- compile the JMule sources
+	 jar		- create the JAR file
+	 clean		- clean the building environment
+   </echo>
+</target>
+
+<target name="compile_main_and_constants">
+	<copy file="${src}/org/jmule/main/Main.java" todir="${tmp}/org/jmule/main/Main.java"/>
+	<copy file="${src}/org/jmule/core/JMConstants.java" todir="${tmp}/org/jmule/core/JMConstants.java"/>
+	<iajc destdir="${bin}" srcdir="${tmp}" source="1.4" target="1.4">
+		<classpath>
+		    <pathelement location="${lib}/aspectjrt.jar"/>
+		</classpath>
+	</iajc>
+	<jar destfile="mainandconstants.jar" basedir="${bin}"/> 
+</target>
+	
+	
+<target name="compile">
+  <echo>
+	  Compiling the JMule sources
+  </echo>
+
+  <iajc destdir="${bin}" source="1.6" srcdir="./src">
+     <classpath>
+	    <pathelement location="${lib}/aspectjrt.jar"/>
+	    <pathelement location="${lib}/swt-linux/swt.jar"/>
+	    <pathelement location="${lib}/swingx-0.9.3.jar"/>
+        <pathelement location="./mainandconstants.jar"/>
+     </classpath>
+	<exclude name="**/Main.java"/>
+    <exclude name="**/JMConstants.java"/>
+  </iajc>
+
+</target>
+
+<target name="jar">
+  <jar destfile="./jmule.jar" basedir="${bin}">
+    <manifest>
+      <attribute name="Main-Class" value="org.jmule.main.Main"/>
+    </manifest>
+ </jar>
+</target>
+
+
+
+</project>

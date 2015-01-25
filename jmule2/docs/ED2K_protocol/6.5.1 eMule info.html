@@ -1,0 +1,105 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size in bytes</th>
+      <th>Default value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Protocol</td>
+      <td>1</td>
+      <td>0xC5</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>4</td>
+      <td>-</td>
+      <td>The size of the message in bytes not including
+the header and size ﬁelds
+</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>1</td>
+      <td>0x01</td>
+      <td>The value of the OP_EMULEINFO opcode
+</td>
+    </tr>
+    <tr>
+      <td>Client Version</td>
+      <td>1</td>
+      <td>NA</td>
+      <td>The version of the eMule client</td>
+    </tr>
+    <tr>
+      <td>Protocol Version
+</td>
+      <td>1</td>
+      <td>0x01</td>
+      <td>The eMule protocol version</td>
+    </tr>
+    <tr>
+      <td>Tag Count</td>
+      <td>4</td>
+      <td>7</td>
+      <td>The number of tags following this</td>
+    </tr>
+    <tr>
+      <td>Compression tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>Designates that this client supports compres-
+sion. The tag is an integer tag an its name is
+0x20. In 0.30e the tag value is 0x01
+</td>
+    </tr>
+    <tr>
+      <td>UDP Version tag
+</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>Explained in the text</td>
+    </tr>
+    <tr>
+      <td>UDP Port tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>Provides the UDP port on which this client
+listens. The tag in an integer tag an its name
+is 0x21. The default value is 4672
+</td>
+    </tr>
+    <tr>
+      <td>Source exchange tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>The tag indicates whether the client supports exchanging sources with other clients</td>
+    </tr>
+    <tr>
+      <td>Comments tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>Indicates whether ﬁle comments are supported</td>
+    </tr>
+    <tr>
+      <td>Extend requests tag</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>The tag indicates the client’s ability to send or receive extended ﬁle requests</td>
+    </tr>
+    <tr>
+      <td>Extended options tag
+</td>
+      <td>8</td>
+      <td>NA</td>
+      <td>The tag provides information regarding two features - the lower 6 bits indicate
+whether the client supports secure identiﬁcation, the next bit (the 7th) indicates whether the
+client supports ﬁle preview.
+</td>
+    </tr>
+  </tbody>
+</table>
