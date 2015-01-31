@@ -2464,8 +2464,12 @@ public class NetworkManagerImpl extends JMuleAbstractManager implements Internal
 		int tag_count = packet.getInt();
 		TagList tag_list = new TagList();
 		for (int i = 0; i < tag_count; i++) {
-			Tag Tag = TagScanner.scanTag(packet);
-			tag_list.addTag(Tag);
+			Tag tag = TagScanner.scanTag(packet);
+			if(tag!=null){
+				tag_list.addTag(tag);
+			} else {
+				//TODO add logging of wrong/null tag(?)
+			}
 		}
 		return tag_list;
 	}

@@ -35,6 +35,7 @@ import org.jmule.core.uploadmanager.UploadManager;
 import org.jmule.ui.CommonUIPreferences;
 import org.jmule.ui.JMuleUIManager;
 import org.jmule.ui.Splash;
+import org.jmule.ui.console.ConsoleSplash;
 import org.jmule.ui.swing.JSplash;
 import org.jmule.ui.swing.wizards.SetupWizard;
 import org.jmule.ui.swt.SWTSplash;
@@ -58,6 +59,10 @@ public class Launcher {
 
 			if (_pref.getUIType().equals(JMuleUIManager.SWING_UI)) {
 				splash = new JSplash();
+			}
+			
+			if (_pref.getUIType().equals(JMuleUIManager.CONSOLE_UI)) {
+				splash = new ConsoleSplash();
 			}
 
 			if (_pref.getUIType().equals(JMuleUIManager.SWT_UI)) {

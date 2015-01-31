@@ -31,7 +31,8 @@ import org.jmule.ui.swt.JMuleSWTUI;
  * 
  * @author javajox
  * @version $$Revision: 1.3 $$
- * Last changed by $$Author: javajox $$ on $$Date: 2009/07/12 14:44:54 $$
+ * changed by $$Author: javajox $$ on $$Date: 2009/07/12 14:44:54 $$
+ * changed by ftarlao
  */
 public class JMuleUIManager {
 

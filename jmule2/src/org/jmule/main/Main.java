@@ -27,6 +27,8 @@ import java.lang.reflect.Constructor;
 import javax.swing.JOptionPane;
 
 import org.jmule.core.JMConstants;
+import org.jmule.ui.CommonUIPreferences;
+import org.jmule.ui.JMuleUIManager;
 
 
 /**
@@ -55,14 +57,25 @@ public class Main {
 			    		                                null, options, options[0]);
 		}
 		
+		
+		parseArgs(args);
+		
+		//execute commandline args
+		if(isHeadLess){
+			//Forces configuration change to Console ONLY interface (Graphical interfaces are disabled)
+			CommonUIPreferences.getSingleton().setUIType(JMuleUIManager.CONSOLE_UI);
+		}
+		
+		
 		if( choice == JOptionPane.YES_OPTION ) {
 
 			  try {
-				   //TODO This is the first step on removing the swt libraries
-				   //Class.forName("org.eclipse.swt.widgets.Display");
+				   
+				   Class.forName("org.eclipse.swt.widgets.Display");
 				  
 				   Class.forName("org.jdesktop.swingx.JXFrame");
 				   
+				   //TODO Why?Why? Why using refelction?
 		   	       final Class startupClass = Class.forName("org.jmule.main.Launcher");
 
 		           final Constructor constructor = startupClass.getConstructor(null);
@@ -96,6 +109,20 @@ public class Main {
 			System.exit( 0 );
 			
 		}
+   }
+	
+   
+   //TODO disable SWT and SWING startup (disabling splash is the first step)
+   private static boolean isHeadLess = false;
+   
+   public static void parseArgs(String[] args){
+	   if(args.length!=0){
+		   for (String string : args) {
+			   if(string.equals("-H")){
+				   isHeadLess = true;
+			   };
+		   }
+	   }
    }
 
 }
