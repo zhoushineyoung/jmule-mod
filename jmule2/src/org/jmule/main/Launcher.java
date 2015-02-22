@@ -52,7 +52,7 @@ public class Launcher {
 	Splash splash = null;
 
 	public Launcher() {
-
+		boolean isConsoleUI = false;
 		try {
 
 			CommonUIPreferences _pref = CommonUIPreferences.getSingleton();
@@ -61,10 +61,11 @@ public class Launcher {
 				splash = new JSplash();
 			}
 			
-			if (_pref.getUIType().equals(JMuleUIManager.CONSOLE_UI)) {
+			isConsoleUI = _pref.getUIType().equals(JMuleUIManager.CONSOLE_UI); 
+			if (isConsoleUI) {
 				splash = new ConsoleSplash();
 			}
-
+			
 			if (_pref.getUIType().equals(JMuleUIManager.SWT_UI)) {
 				// first of all we must start the swt thread
 				SWTThread.getInstance().initialize();
@@ -123,7 +124,8 @@ public class Launcher {
 
 			}
 
-			if (is_core_first_run) {
+			//TODO for now, wizard is disabled for console.. perhaps later.. I have to add console wizard
+			if (is_core_first_run && !isConsoleUI) {
 
 				splash.increaseProgress(5, "Running setup wizard");
 

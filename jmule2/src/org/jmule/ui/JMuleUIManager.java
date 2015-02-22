@@ -24,6 +24,7 @@ package org.jmule.ui;
 
 import org.jmule.core.JMuleCore;
 import org.jmule.core.JMuleCoreFactory;
+import org.jmule.ui.console.JMuleConsoleUI;
 import org.jmule.ui.swing.JMuleSwingUI;
 import org.jmule.ui.swt.JMuleSWTUI;
 
@@ -83,7 +84,7 @@ public class JMuleUIManager {
 		
 		if( singleton == null ) singleton = new JMuleUIManager();
 		
-		       if( ui_type.equals( SWT_UI ) ) {
+		if( ui_type.equals( SWT_UI ) ) {
 			
 			            ui_instance = new JMuleSWTUI();
 		    	   
@@ -91,12 +92,11 @@ public class JMuleUIManager {
 		    	        // swt_launcher.start();
 			
 		} else if( ui_type.equals( SWING_UI ) ) {
-			
-			            ui_instance = new JMuleSwingUI();
+			ui_instance = new JMuleSwingUI();
+		} else if( ui_type.equals( CONSOLE_UI ) ) {
+            ui_instance = new JMuleConsoleUI();
 		} else {
-			
 			throw new JMuleUIManagerException("Unknown ui type : " + ui_type);
-			
 		}
 		       
 		ui_instance.initialize();
@@ -123,7 +123,6 @@ public class JMuleUIManager {
 	}
 	
 	public JMuleCore getJMuleCore() {
-		
 		return _core;
 	}
 	

@@ -515,7 +515,7 @@ public class UIConstants {
 		default_values.put(NIGHTLY_BUILD_WARNING_ID + ENABLED,               true);
 		default_values.put(NIGHTLY_BUILD_WARNING_JM_VER_ID + VERSION,        JMConstants.DEV_VERSION);
 		
-		default_values.put(CONNECT_AT_STARTUP_ID + ENABLED,                  false);
+		default_values.put(CONNECT_AT_STARTUP_ID + ENABLED,                  true);
 		
 	}
 	
